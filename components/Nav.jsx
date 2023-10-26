@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState,useEffect } from 'react';
-import {siginIn,signOut,useSession,getProviders} from 'next-auth/react';
+import {signIn,signOut,useSession,getProviders} from 'next-auth/react';
 import { set } from 'mongoose';
 
 const Nav = () => {
@@ -39,7 +39,6 @@ const Nav = () => {
         </p>
         </Link>
 
-        {alert(session?.user)}
 
     <div className='sm:flex hidden'>
         {session?.user ?
