@@ -8,7 +8,8 @@ import { set } from 'mongoose';
 
 const Nav = () => {
 
-        const{data: session} = useSession(); 
+    const{data: session} = useSession(); 
+
     const[providers, setProviders] = useState(null);
     const[toggleDropdown,setToggleDropdown] = useState(false);
 
@@ -20,7 +21,7 @@ const Nav = () => {
         }
 
         setUpProviders();
-    },[])
+    },[]);
 
   return (
     <nav className='flex-between w-full mb-16 pt-3'>
@@ -39,7 +40,9 @@ const Nav = () => {
         </p>
         </Link>
 
+      
 
+{/*Desktop */}
     <div className='sm:flex hidden'>
         {session?.user ?
           (
@@ -79,6 +82,7 @@ const Nav = () => {
         }
     </div>
 
+{/*Mobile */}
     <div className='sm:hidden flex relative'>
 
         {
